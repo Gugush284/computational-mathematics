@@ -1,5 +1,4 @@
 import numpy as np    # Импорт бибилиотеки numpy
-import matplotlib.pyplot as plt   # Импорт модуля matplotlib.pyplot
 import copy
 
 def printMatrix(matrix):
@@ -28,6 +27,17 @@ def staffing(size):
 
     return A, b
 
+def LDUseparation(A, size):
+    U = np.full((size, size), 0.0)
+    LD = A
+
+    for i in range(0, size):
+        for j in range(i+1, size):
+            U[i][j] = LD[i][j]
+            LD[i][j] = 0
+
+    return LD, U
+
 def gauss(Ar, br, size):
     A = copy.deepcopy(Ar)
     b = copy.deepcopy(br)
@@ -52,19 +62,35 @@ def gauss(Ar, br, size):
         x[k] = x[k]/A[k][k]
 
     return x
+
+def seidel(Ar, br, size):
+    A = copy.deepcopy(Ar)
+    b = copy.deepcopy(br)
+    x = np.full(size, 0.0)
+
+    LD, U = LDUseparation(A, size)
+
+    printMatrix(LD)
+    print("U")
+    printMatrix(U)
+
+    return x
       
 def main():
-    size = 4
+    size = 3
 
     A, b = staffing(size)
 
-    x = gauss(A, b, size)
+    x_gauss = gauss(A, b, size)
+    x_seidl = seidel(A, b, size)
 
     print("Матрица коэффициентов")
     printMatrix(A)
     print("Вектор свободных членов")
     printMatrix(b)
-    print("Вектор-решение")
-    printMatrix(x) 
+    print("Вектор-решение по Гауссу")
+    printMatrix(x_gauss)
+    print("Вектор-решение по Зейделю")
+    printMatrix(x_seidl)
 
 main()
