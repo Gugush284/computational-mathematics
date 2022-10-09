@@ -5,6 +5,16 @@ def printMatrix(matrix):
     for elem in matrix:
         print(elem)
 
+def printResult(ref, gau, seidl):
+    for i in range(len(ref)):
+        print(
+            ref[i],
+            "\t",
+            gau[i],
+            "\t",
+            seidl[i]
+        )
+
 def staffing(size):
     A = np.eye(size)  # Создание единичной матрицы
 
@@ -27,20 +37,10 @@ def staffing(size):
 
     return A, b
 
-def LDUseparation(A, size):
-    U = np.full((size, size), 0.0)
-    LD = A
-
-    for i in range(0, size):
-        for j in range(i+1, size):
-            U[i][j] = LD[i][j]
-            LD[i][j] = 0
-
-    return LD, U
-
-def gauss(Ar, br, size):
+def gauss(Ar, br):
     A = copy.deepcopy(Ar)
     b = copy.deepcopy(br)
+    size = len(Ar)
     x = np.full(size, 0.0)
 
     for k in range(0, size-1):
@@ -63,34 +63,38 @@ def gauss(Ar, br, size):
 
     return x
 
-def seidel(Ar, br, size):
-    A = copy.deepcopy(Ar)
-    b = copy.deepcopy(br)
-    x = np.full(size, 0.0)
+def seidel(A, b):
+    size = len(A)
+    x = np.zeros(size)
 
-    LD, U = LDUseparation(A, size)
+    converge = True
+    while converge:
+        x_new = np.copy(x)
+        for i in range(size):
+            s1 = sum(A[i][j] * x_new[j] for j in range(i))
+            s2 = sum(A[i][j] * x[j] for j in range(i + 1, size))
+            x_new[i] = (b[i] - s1 - s2) / A[i][i]
 
-    printMatrix(LD)
-    print("U")
-    printMatrix(U)
+        converge = (np.sqrt(sum((x_new[i] - x[i]) ** 2 for i in range(size))) > np.finfo(np.float64).eps)
+        x = x_new
 
     return x
       
 def main():
-    size = 3
+    size = 100
 
     A, b = staffing(size)
 
-    x_gauss = gauss(A, b, size)
-    x_seidl = seidel(A, b, size)
+    print(len(A))
+
+    x_gauss = gauss(A, b)
+    x_seid = seidel(A, b)
 
     print("Матрица коэффициентов")
     printMatrix(A)
     print("Вектор свободных членов")
     printMatrix(b)
-    print("Вектор-решение по Гауссу")
-    printMatrix(x_gauss)
-    print("Вектор-решение по Зейделю")
-    printMatrix(x_seidl)
+    print("Эталонное решение\tВектор-решение по Гауссу\tВектор-решение по Зейделю")
+    printResult(np.linalg.solve(A, b), x_gauss, x_seid)
 
 main()
