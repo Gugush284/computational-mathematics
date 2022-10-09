@@ -79,16 +79,29 @@ def seidel(A, b):
         x = x_new
 
     return x
+
+def eigenvalue(A):
+    eigenvalues, _ = np.linalg.eig(A)
+    if len(eigenvalues) == 1:
+        return eigenvalues, eigenvalues
+    else:
+        max = eigenvalues[0]
+        min = eigenvalues[0]
+        for value in eigenvalues:
+            if value > max:
+                max = value
+            if value < min:
+                min = value
+        return min, max
       
 def main():
-    size = 100
+    size = 4
 
     A, b = staffing(size)
 
-    print(len(A))
-
     x_gauss = gauss(A, b)
     x_seid = seidel(A, b)
+    lambda_min, lambda_max = eigenvalue(A)
 
     print("Матрица коэффициентов")
     printMatrix(A)
@@ -96,5 +109,7 @@ def main():
     printMatrix(b)
     print("Эталонное решение\tВектор-решение по Гауссу\tВектор-решение по Зейделю")
     printResult(np.linalg.solve(A, b), x_gauss, x_seid)
+    print("Минимальное собственное значение: ", lambda_min)
+    print("Максимальное собственное значение: ", lambda_max)
 
 main()
