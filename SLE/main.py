@@ -5,15 +5,11 @@ def printMatrix(matrix):
     for elem in matrix:
         print(elem)
 
-def printResult(ref, gau, seidl):
-    for i in range(len(ref)):
-        print(
-            ref[i],
-            "\t",
-            gau[i],
-            "\t",
-            seidl[i]
-        )
+def printResult(*nums):
+    for i in range(len(nums[0])):
+        for n in nums:
+            print(n[i], end="\t")
+        print(end="\n")
 
 def staffing(size):
     A = np.eye(size)  # Создание единичной матрицы
@@ -61,7 +57,9 @@ def gauss(Ar, br):
 
         x[k] = x[k]/A[k][k]
 
-    return x
+    r = br - Ar.dot(x)
+
+    return x, r
 
 def seidel(A, b):
     size = len(A)
@@ -77,8 +75,10 @@ def seidel(A, b):
 
         converge = (np.sqrt(sum((x_new[i] - x[i]) ** 2 for i in range(size))) > np.finfo(np.float64).eps)
         x = x_new
+        
+    r = b - A.dot(x)
 
-    return x
+    return x, r
 
 def eigenvalue(A):
     eigenvalues, _ = np.linalg.eig(A)
@@ -93,23 +93,43 @@ def eigenvalue(A):
             if value < min:
                 min = value
         return min, max
+
+def norm(A):
+    n = 0
+    for i in range(len(A)):
+        s = sum(abs(A[i][k]) for k in range(len(A)))
+        if n < s:
+            n = s
+
+    return n
+
+def conditionality(A):
+    invA = np.linalg.inv(A)
+    return (norm(A)*norm(invA))
       
 def main():
-    size = 4
+    size = 100
 
     A, b = staffing(size)
 
-    x_gauss = gauss(A, b)
-    x_seid = seidel(A, b)
-    lambda_min, lambda_max = eigenvalue(A)
-
     print("Матрица коэффициентов")
     printMatrix(A)
-    print("Вектор свободных членов")
+    print("\nВектор свободных членов")
     printMatrix(b)
-    print("Эталонное решение\tВектор-решение по Гауссу\tВектор-решение по Зейделю")
+
+    x_gauss, r_gauss = gauss(A, b)
+    x_seid, r_seid = seidel(A, b)
+    lambda_min, lambda_max = eigenvalue(A)
+
+    print("\nЭталонное решение\tВектор-решение по Гауссу\tВектор-решение по Зейделю")
     printResult(np.linalg.solve(A, b), x_gauss, x_seid)
-    print("Минимальное собственное значение: ", lambda_min)
+
+    print("\nНевязка по Гауссу\tНевязка по Зейделю")
+    printResult(r_gauss, r_seid)
+
+    print("\nМинимальное собственное значение: ", lambda_min)
     print("Максимальное собственное значение: ", lambda_max)
+    print("Эталонное число обусловленности:", np.linalg.cond(A, np.inf))
+    print("Число обусловленности", conditionality(A), "\n")
 
 main()
