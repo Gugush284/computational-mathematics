@@ -1,7 +1,5 @@
 import copy
-
 import numpy as np
-
 
 def printMatrix(matrix): # Печать 
     for elem in matrix:
@@ -149,7 +147,7 @@ def inaccuracy(Matrix, solve, seid, amIter):
 
       
 def main():
-    size = 100
+    size = 5
 
     A, b = staffing(size)
 

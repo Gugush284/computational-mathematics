@@ -13,6 +13,8 @@ def directEuler(n, h, x, y):
         x += h
     return x, y # решение
 
+# def centralEuler(n, h, x, y):
+
 def main(n, start, stop):
     h = (stop - start)/n
     print(h)
@@ -23,6 +25,10 @@ def main(n, start, stop):
     print(ySDE)
     print(np.abs(ySDE-function(1)))
 
-
+    #print("Solve of central Euler")
+    #xCDE, yCDE = centralEuler(n, h, start, function(start))
+    #print(xCDE)
+    #print(yCDE)
+    #print(np.abs(yCDE[2]-function(1)))
     
-main(8000000, 0, 1)
+main(10000000, 0, 1)
