@@ -1,2 +1,2 @@
 # computational-mathematics
-MIPT Computational Mathematics Course
+University course of computational mathematics
