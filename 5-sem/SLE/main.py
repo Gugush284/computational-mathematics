@@ -1,7 +1,7 @@
 import copy
 import numpy as np
 
-def printMatrix(matrix): # Печать 
+def printMatrix(matrix): 
     for elem in matrix:
         print(elem)
 
@@ -12,7 +12,7 @@ def printResult(*nums):
         print(end="\n")
 
 def staffing(size):
-    A = np.eye(size)  # Создание единичной матрицы
+    A = np.eye(size)  
 
     for i in range(0, size):
         A[0][i] = 1.0
@@ -73,7 +73,7 @@ def seidel(A, b, solve):
     size = len(A)
     x = np.zeros(size)
 
-    print("Зейдель - итерации")
+    print("Seidel iterations")
     converge = True
     amIter = 0
     while converge:
@@ -151,9 +151,9 @@ def main():
 
     A, b = staffing(size)
 
-    print("Матрица коэффициентов")
+    print("The coefficient matrix")
     printMatrix(A)
-    print("\nВектор свободных членов")
+    print("\nVector of free members")
     printMatrix(b)
 
     x = np.linalg.solve(A, b)
@@ -161,16 +161,16 @@ def main():
     x_seid, r_seid, amIter = seidel(A, b, x)
     lambda_min, lambda_max = eigenvalue(A)
 
-    print("\nЭталонное решение\tВектор-решение по Гауссу\tВектор-решение по Зейделю")
+    print("\nThe reference solution\tVector-Gaussian solution\tVector solution by Seidel")
     printResult(x, x_gauss, x_seid)
 
-    print("\nНевязка по Гауссу\tНевязка по Зейделю")
+    print("\nGaussian discrepancy\tThe Seidel discrepancy")
     printResult(r_gauss, r_seid)
 
-    print("\nМинимальное собственное значение: ", lambda_min)
-    print("Максимальное собственное значение: ", lambda_max)
-    print("Эталонное число обусловленности:", np.linalg.cond(A, np.inf))
-    print("Число обусловленности", conditionality(A), "\n")
+    print("\nMinimum eigenvalue: ", lambda_min)
+    print("Maximum eigenvalue: ", lambda_max)
+    print("The reference number of conditionality: ", np.linalg.cond(A, np.inf))
+    print("The number of conditionality ", conditionality(A), "\n")
 
     inaccuracy(A, x, x_seid, amIter)
 
