@@ -1,0 +1,111 @@
+<mxfile host="Electron" modified="2024-12-02T14:23:09.604Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="vN3gQCRufmpQYLRGeNDY" version="24.1.0" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="2266" dy="917" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="8VJ6DCi1QPdqIy9XY9SG-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="Инициализация начальных параметров" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="264" y="130" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-0" target="8VJ6DCi1QPdqIy9XY9SG-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-0" value="Вычисление переменных метода Рунге-Кутты" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="264" y="310" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-1" target="8VJ6DCi1QPdqIy9XY9SG-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-1" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;Выполнение &lt;/div&gt;&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;численного &lt;/div&gt;&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;решения&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="264" y="210" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-4" target="8VJ6DCi1QPdqIy9XY9SG-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-4" value="Вычисление коэфициента k1 метода Рунге-Кутты" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="264" y="580" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-5" target="8VJ6DCi1QPdqIy9XY9SG-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-5" value="Вычисление коэфициента k2 метода Рунге-Кутты" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="264" y="660" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-6" target="8VJ6DCi1QPdqIy9XY9SG-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-6" target="8VJ6DCi1QPdqIy9XY9SG-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-6" value="Пройдены все шаги&lt;div&gt;интегрирования&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="254" y="410" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-8" target="8VJ6DCi1QPdqIy9XY9SG-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-8" value="Вычисление коэфициента k3 метода Рунге-Кутты" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="264" y="740" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-10" target="8VJ6DCi1QPdqIy9XY9SG-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-10" value="Вычисление коэфициента k4 метода Рунге-Кутты" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="259" y="810" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-14" target="8VJ6DCi1QPdqIy9XY9SG-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-14" value="Вычисление численности жертв на данном шаге" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="259" y="880" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-15" target="8VJ6DCi1QPdqIy9XY9SG-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="144" y="975" />
+              <mxPoint x="144" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-15" value="Вычисление численности хищников на данном шаге" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="259" y="950" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-19" value="Нет" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="324" y="540" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-20" target="8VJ6DCi1QPdqIy9XY9SG-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-20" value="Постоение графика популяции от времени" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="544" y="445" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-23" value="Да" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="444" y="445" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-25" target="8VJ6DCi1QPdqIy9XY9SG-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-25" value="Нахождение стационарных точек" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="544" y="540" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-28" target="8VJ6DCi1QPdqIy9XY9SG-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-28" value="Постоение фазовой диаграммы" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="544" y="630" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8VJ6DCi1QPdqIy9XY9SG-30" target="WIyWlLk6GJQsqaUBKTNV-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-30" value="Старт" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="274" y="10" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8VJ6DCi1QPdqIy9XY9SG-32" value="Конец" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="554" y="710" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
