@@ -1,1 +1,8 @@
 .ipynb_checkpoints
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex*
+*.toc
+*.drawio.bkp
